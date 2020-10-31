@@ -26,7 +26,7 @@ client.on("message", async message => {
     });
 
     if (command === "help") {
-        message.reply("Los sonidos disponibles son: \nfu - fua - tenshi - siri - uga - paja - chileno - urss")
+        message.reply("Los sonidos disponibles son: \nfu - fua - tenshi - siri - uga - paja - chileno - urss - jugadores")
     }
 
     else if (command === "fua") {
