@@ -26,7 +26,7 @@ client.on("message", async message => {
     });
 
     if (command === "help") {
-        message.reply("Los sonidos disponibles son: \nfu - fua - tenshi - siri - uga")
+        message.reply("Los sonidos disponibles son: \nfu - fua - tenshi - siri - uga - paja - chileno - urss")
     }
 
     else if (command === "fua") {
@@ -76,6 +76,45 @@ client.on("message", async message => {
             } else {
                 const connection = await message.member.voice.channel.join();
                 const dispatcher = connection.play('./sounds/uga.mp3');
+            }
+        } catch (error) {
+
+        }
+    }
+
+    else if (command === "paja") {
+        try {
+            if (!Canalvoz || Canalvoz.type !== 'voice') {
+                message.channel.send('Necesitas unirte a un canal de voz primero').catch(error => message.channel.send(error));
+            } else {
+                const connection = await message.member.voice.channel.join();
+                const dispatcher = connection.play('./sounds/paja.mp3');
+            }
+        } catch (error) {
+
+        }
+    }
+
+    else if (command === "chileno") {
+        try {
+            if (!Canalvoz || Canalvoz.type !== 'voice') {
+                message.channel.send('Necesitas unirte a un canal de voz primero').catch(error => message.channel.send(error));
+            } else {
+                const connection = await message.member.voice.channel.join();
+                const dispatcher = connection.play('./sounds/chileno.mp3');
+            }
+        } catch (error) {
+
+        }
+    }
+
+    else if (command === "urss") {
+        try {
+            if (!Canalvoz || Canalvoz.type !== 'voice') {
+                message.channel.send('Necesitas unirte a un canal de voz primero').catch(error => message.channel.send(error));
+            } else {
+                const connection = await message.member.voice.channel.join();
+                const dispatcher = connection.play('./sounds/urss.mp3');
             }
         } catch (error) {
 

@@ -13,12 +13,16 @@
   },
   "dependencies": {
     "@discordjs/node-pre-gyp": "^0.1.0",
+    "axios": "^0.21.0",
     "detect-libc": "^1.0.3",
     "discord.js": "^12.4.1",
     "ffmpeg": "^0.0.4",
     "ffmpeg-static": "^4.2.7",
+    "follow-redirects": "^1.13.0",
     "mkdirp": "^0.5.5",
     "node-addon-api": "^3.0.2",
-    "opusscript": "^0.0.7"
+    "node-fetch": "^2.6.1",
+    "opusscript": "^0.0.7",
+    "tmi.js": "^1.5.0"
   }
 }
