@@ -121,6 +121,19 @@ client.on("message", async message => {
         }
     }
 
+    else if (command === "jugadores") {
+        try {
+            if (!Canalvoz || Canalvoz.type !== 'voice') {
+                message.channel.send('Necesitas unirte a un canal de voz primero').catch(error => message.channel.send(error));
+            } else {
+                const connection = await message.member.voice.channel.join();
+                const dispatcher = connection.play('./sounds/jugadores.mp3');
+            }
+        } catch (error) {
+
+        }
+    }
+
     if (command === "join") {
         try {
             if (!Canalvoz || Canalvoz.type !== 'voice') {
