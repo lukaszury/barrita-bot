@@ -5,7 +5,7 @@ const prefix = "b!";
 
 client.login(process.env.token);
 
-client.on("ready", function(message){
+client.on("ready", function (message) {
     console.log("tamo");
 })
 
@@ -21,8 +21,8 @@ client.on("message", async message => {
     let Canalvoz = message.member.voice.channel;
 
     client.user.setActivity("Comandos: b!help", {
-        type: "WATCHING",
-        name: "Comandos: b!help"
+        type: "CUSTOM_STATUS",
+        name: "WIKI LA CONCHA DE TU HERMANA"
     });
 
     if (command === "help") {
@@ -33,8 +33,12 @@ client.on("message", async message => {
         if (!Canalvoz || Canalvoz.type !== 'voice') {
             message.channel.send('Necesitas unirte a un canal de voz primero').catch(error => message.channel.send(error));
         } else {
-            const connection = await message.member.voice.channel.join();
-            const dispatcher = connection.play('./sounds/fua.mp3');
+            try {
+                const connection = await message.member.voice.channel.join();
+                const dispatcher = connection.play('./sounds/fua.mp3');
+            } catch (error) {
+                console.log(error)
+            }
         }
     }
 
@@ -42,8 +46,12 @@ client.on("message", async message => {
         if (!Canalvoz || Canalvoz.type !== 'voice') {
             message.channel.send('Necesitas unirte a un canal de voz primero').catch(error => message.channel.send(error));
         } else {
-            const connection = await message.member.voice.channel.join();
-            const dispatcher = connection.play('./sounds/fu.mp3');
+            try {
+                const connection = await message.member.voice.channel.join();
+                const dispatcher = connection.play('./sounds/fu.mp3');
+            } catch (error) {
+                console.log(error)
+            }
         }
     }
 
@@ -51,112 +59,116 @@ client.on("message", async message => {
         if (!Canalvoz || Canalvoz.type !== 'voice') {
             message.channel.send('Necesitas unirte a un canal de voz primero').catch(error => message.channel.send(error));
         } else {
-            const connection = await message.member.voice.channel.join();
-            const dispatcher = connection.play('./sounds/tenshi.mp3');
+            try {
+                const connection = await message.member.voice.channel.join();
+                const dispatcher = connection.play('./sounds/tenshi.mp3');
+            } catch (error) {
+                console.log(error)
+            }
         }
     }
 
     else if (command === "siri") {
-        try {
-            if (!Canalvoz || Canalvoz.type !== 'voice') {
-                message.channel.send('Necesitas unirte a un canal de voz primero').catch(error => message.channel.send(error));
-            } else {
+        if (!Canalvoz || Canalvoz.type !== 'voice') {
+            message.channel.send('Necesitas unirte a un canal de voz primero').catch(error => message.channel.send(error));
+        } else {
+            try {
                 const connection = await message.member.voice.channel.join();
                 const dispatcher = connection.play('./sounds/siri.mp3');
+            } catch (error) {
+                console.log(error)
             }
-        } catch (error) {
-
         }
     }
 
     else if (command === "uga") {
-        try {
-            if (!Canalvoz || Canalvoz.type !== 'voice') {
-                message.channel.send('Necesitas unirte a un canal de voz primero').catch(error => message.channel.send(error));
-            } else {
+        if (!Canalvoz || Canalvoz.type !== 'voice') {
+            message.channel.send('Necesitas unirte a un canal de voz primero').catch(error => message.channel.send(error));
+        } else {
+            try {
                 const connection = await message.member.voice.channel.join();
                 const dispatcher = connection.play('./sounds/uga.mp3');
+            } catch (error) {
+                console.log(error)
             }
-        } catch (error) {
-
         }
     }
 
     else if (command === "paja") {
-        try {
-            if (!Canalvoz || Canalvoz.type !== 'voice') {
-                message.channel.send('Necesitas unirte a un canal de voz primero').catch(error => message.channel.send(error));
-            } else {
+        if (!Canalvoz || Canalvoz.type !== 'voice') {
+            message.channel.send('Necesitas unirte a un canal de voz primero').catch(error => message.channel.send(error));
+        } else {
+            try {
                 const connection = await message.member.voice.channel.join();
                 const dispatcher = connection.play('./sounds/paja.mp3');
+            } catch (error) {
+                console.log(error)
             }
-        } catch (error) {
-
         }
     }
 
     else if (command === "chileno") {
-        try {
-            if (!Canalvoz || Canalvoz.type !== 'voice') {
-                message.channel.send('Necesitas unirte a un canal de voz primero').catch(error => message.channel.send(error));
-            } else {
+        if (!Canalvoz || Canalvoz.type !== 'voice') {
+            message.channel.send('Necesitas unirte a un canal de voz primero').catch(error => message.channel.send(error));
+        } else {
+            try {
                 const connection = await message.member.voice.channel.join();
                 const dispatcher = connection.play('./sounds/chileno.mp3');
+            } catch (error) {
+                console.log(error)
             }
-        } catch (error) {
-
         }
     }
 
     else if (command === "urss") {
-        try {
-            if (!Canalvoz || Canalvoz.type !== 'voice') {
-                message.channel.send('Necesitas unirte a un canal de voz primero').catch(error => message.channel.send(error));
-            } else {
+        if (!Canalvoz || Canalvoz.type !== 'voice') {
+            message.channel.send('Necesitas unirte a un canal de voz primero').catch(error => message.channel.send(error));
+        } else {
+            try {
                 const connection = await message.member.voice.channel.join();
                 const dispatcher = connection.play('./sounds/urss.mp3');
+            } catch (error) {
+                console.log(error)
             }
-        } catch (error) {
-
         }
     }
 
     else if (command === "jugadores") {
-        try {
-            if (!Canalvoz || Canalvoz.type !== 'voice') {
-                message.channel.send('Necesitas unirte a un canal de voz primero').catch(error => message.channel.send(error));
-            } else {
+        if (!Canalvoz || Canalvoz.type !== 'voice') {
+            message.channel.send('Necesitas unirte a un canal de voz primero').catch(error => message.channel.send(error));
+        } else {
+            try {
                 const connection = await message.member.voice.channel.join();
                 const dispatcher = connection.play('./sounds/jugadores.mp3');
+            } catch (error) {
+                console.log(error)
             }
-        } catch (error) {
-
         }
     }
 
     else if (command === "viejardo") {
-        try {
-            if (!Canalvoz || Canalvoz.type !== 'voice') {
-                message.channel.send('Necesitas unirte a un canal de voz primero').catch(error => message.channel.send(error));
-            } else {
+        if (!Canalvoz || Canalvoz.type !== 'voice') {
+            message.channel.send('Necesitas unirte a un canal de voz primero').catch(error => message.channel.send(error));
+        } else {
+            try {
                 const connection = await message.member.voice.channel.join();
                 const dispatcher = connection.play('./sounds/viejardo.mp3');
+            } catch (error) {
+                console.log(error)
             }
-        } catch (error) {
-
         }
     }
 
     else if (command === "anashe") {
-        try {
-            if (!Canalvoz || Canalvoz.type !== 'voice') {
-                message.channel.send('Necesitas unirte a un canal de voz primero').catch(error => message.channel.send(error));
-            } else {
+        if (!Canalvoz || Canalvoz.type !== 'voice') {
+            message.channel.send('Necesitas unirte a un canal de voz primero').catch(error => message.channel.send(error));
+        } else {
+            try {
                 const connection = await message.member.voice.channel.join();
                 const dispatcher = connection.play('./sounds/anashe.mp3');
+            } catch (error) {
+                console.log(error)
             }
-        } catch (error) {
-
         }
     }
 
