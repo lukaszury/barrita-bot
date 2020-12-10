@@ -26,7 +26,7 @@ client.on("message", async message => {
     });
 
     if (command === "help") {
-        message.reply("Los sonidos disponibles son: \nfu - fua - tenshi - siri - uga - paja - chileno - urss - jugadores - viejardo - anashe")
+        message.reply("Los sonidos disponibles son: \nfu - fua - tenshi - siri - uga - paja - chileno - urss - jugadores - viejardo - anashe - calor")
     }
 
     else if (command === "fua") {
@@ -166,6 +166,19 @@ client.on("message", async message => {
             try {
                 const connection = await message.member.voice.channel.join();
                 const dispatcher = connection.play('./sounds/anashe.mp3');
+            } catch (error) {
+                console.log(error)
+            }
+        }
+    }
+
+    else if (command === "calor") {
+        if (!Canalvoz || Canalvoz.type !== 'voice') {
+            message.channel.send('Necesitas unirte a un canal de voz primero').catch(error => message.channel.send(error));
+        } else {
+            try {
+                const connection = await message.member.voice.channel.join();
+                const dispatcher = connection.play('./sounds/calor.mp3');
             } catch (error) {
                 console.log(error)
             }
