@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const prefix = "b!";
 
-client.login(NzY4NTY4NjQzODA2MDM1OTk4.X5CXUw.7Ae9_nMC9jUO0uCkxMCCz4aZFuM);
+client.login("NzY4NTY4NjQzODA2MDM1OTk4.X5CXUw.5QtXEIytLZlDTwX0a_F3fW5QB1A");
 
 client.on("ready", function (message) {
     console.log("tamo");
